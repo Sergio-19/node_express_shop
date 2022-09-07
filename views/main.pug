@@ -1,0 +1,14 @@
+include head.pug 
+    div(class= 'wrap')
+        div(class= 'content')
+            header(class= 'site-header')
+                include header.pug
+            div(class= 'container')
+            each val, index in goods
+                div(class= 'good')
+                    p #{val['name']}
+                    img(src= 'images/' + val['image'])
+            include nav.pug 
+    include footer.pug                
+
+

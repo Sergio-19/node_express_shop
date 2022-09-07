@@ -1,0 +1,16 @@
+include head.pug 
+    div(class= 'wrap')
+        div(class= 'content')
+            header(class= 'site-header')
+                include header.pug
+            div(class= 'container')
+                div(class= 'row')
+                    div(class= 'col col-md-12')
+                        div(class= 'row')
+                            h2= cat['category']  
+                            button(class= 'push-test') PUSH 
+                            p= cat['description'] 
+                            each val, index in goods 
+                                include card.pug  
+            include nav.pug
+    include footer.pug                             
